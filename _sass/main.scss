@@ -1,5 +1,5 @@
 body {
-  max-width: 1920px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -63,14 +63,8 @@ p {
 
 // NAVBAR
 
-.home-wrapper {
-  position: relative;
-  height: 100%;
-}
-
 .navbar-seven {
-  // background-color: rgba(255,255,255,0);
-  background-color: white;
+  background-color: rgba(255,255,255,0);
   display: flex;
   flex-wrap: wrap;
   padding: 0 20px;
@@ -92,34 +86,17 @@ p {
 }
 
 .navbar-links {
-  margin: 10px;
+  height: 50.8px;
+  margin: 0 10px;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   display: none;
 
   a {
     text-decoration: none;
     color: black;
     font-family: "InfoDispSemiBold Roman";
-  }
-}
-
-.navbar-burger {
-  position: absolute;
-  top: 5.5px;
-  right: 10px;
-
-  i {
-    font-size: 19px;
-  }
-}
-
-.navbar-burger > button {
-  background-color: rgba(255,255,255,0) !important;
-  outline-color: white !important;
-
-  &:focus {
-    outline: 0 !important;
   }
 }
 
@@ -132,18 +109,21 @@ p {
         padding-left: 20px;
 
         .navbar-links {
-          display: inline;
+          display: flex;
+          justify-content: flex-end;
             a {
-                margin: 0 10px;
-                font-size: 19px;
-            }
-        }
+              margin: 0 20px;
+              font-size: 19px;
+              border: solid 3px rgba(255,255,255,0);
 
-        .navbar-burger {
-          display: none;
+              &:hover {
+                border-bottom: solid 3px rgb(233, 95, 72);
+              }
+            }
         }
     }
 }
+
 
 // -------------------------------------------------------------------
 
@@ -153,7 +133,7 @@ p {
   height: 100vh;
   max-height: 1080px;
   width: 100vw;
-  max-width: 1920px;
+  max-width: 1440px;
   background-image: url("/assets/img/banner_seven_invest.jpg");
   background-size: cover;
   background-position: 65% 100%;
@@ -204,8 +184,9 @@ p {
   }
 }
 
-.invest-vision > h3 {
+.invest-vision > h2 {
   font-family: 'InfoDispBold Roman';
+  text-align: center;
 }
 
 // -------------------------------------------------------------------
@@ -213,64 +194,121 @@ p {
 // PORTFOLIO
 
 .invest-portfolio {
-  padding: 50px 15px;
+  padding: 50px 15px 0 15px;
   text-align: center;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @include from-medium {
-    padding: 50px 100px;
+    padding: 50px 100px 0 100px;
   }
 
   @include from-xlarge {
-    padding: 50px 200px;
+    padding: 50px 200px 0 200px;
   }
 }
 
+.invest-portfolio > h2 {
+  font-family: 'InfoDispBold Roman';
+}
+
 .invest-portfolio-card {
-  width: 100%;
-  height: auto;
+  width: 300px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: 2px 2px 10px rgba(136,136,136,0.8);
-  margin: 50px 0;
+  margin-bottom: 100px;
 
-  @include from-xlarge {
+  @include from-medium {
+    width: 400px;
+    height: 800px;
+  }
+
+  @include from-large {
     flex-direction: row;
+    width: 1000px;
+    height: 500px;
   }
 }
 
 .invest-portfolio-card-img {
   width: 100%;
-  height: 70vh;
+  height: 300px;
 
-  @include from-xlarge {
+  @include from-medium {
+    width: 100%;
+    height: 400px;
+  }
+
+  @include from-large {
     width: 50%;
-    height: 70vh;
+    height: 500px;
   }
 }
 
 .invest-portfolio-card-text {
   width: 100%;
-  height: auto;
-  padding: 40px 20px;
+  height: 300px;
+  padding: 20px 20px;
   position: relative;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-  @include from-xlarge {
+  @include from-medium {
+    width: 100%;
+    height: 400px;
+  }
+
+  @include from-large {
     width: 50%;
-    min-height: 70vh;
+    height: 500px;
   }
 }
 
 .invest-portfolio-card-text > h3 {
   margin-top: 0;
   font-family: 'InfoDispBold Roman';
+  font-size: 16px;
+
+  @include from-medium {
+    font-size: 20px;
+  }
+
+  @include from-large {
+    font-size: 24px;
+  }
 }
 
 .invest-portfolio-card-text > h4 {
   margin-top: 0;
   font-family: 'InfoDispBook Italic';
+  font-size: 16px;
+
+  @include from-medium {
+    font-size: 20px;
+  }
+
+  @include from-large {
+    font-size: 24px;
+  }
+}
+
+.invest-portfolio-card-text > p {
+  font-size: 12px;
+
+  @include from-medium {
+    font-size: 16px;
+  }
+
+  @include from-large {
+    font-size: 20px;
+  }
 }
 
 .switch-img {
@@ -286,13 +324,17 @@ p {
 }
 
 .invest-portfolio-card-logo {
-  height: 75px;
+  height: 30px;
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 10px;
+  right: 10px;
+
+  @include from-medium {
+    height: 65px;
+  }
 
   @include from-xlarge {
-    height: 100px;
+    height: 80px;
   }
 }
 
@@ -300,9 +342,9 @@ p {
 
 // ANCHOR
 
-#vision, #portfolio {
+#vision-anchor, #portfolio-anchor {
   position: absolute;
-  top: -50px;
+  top: 0;
 }
 
 // -----------------------------------------------------------------
@@ -355,9 +397,8 @@ p {
 
   @include from-large {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-grow: 1;
-    width: 80%;
   }
 }
 

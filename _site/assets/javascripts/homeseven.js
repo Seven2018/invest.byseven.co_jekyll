@@ -1,8 +1,8 @@
 const initUpdateNavbarOnScroll = () => {
-  const navbar = document.querySelector('.home-navbar');
+  const navbar = document.querySelector('.navbar-seven');
   if (navbar) {
     window.addEventListener('scroll', () => {
-      if (window.scrollY >= window.innerHeight*.919) {
+      if (window.scrollY >= window.innerHeight*.95) {
         navbar.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');

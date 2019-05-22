@@ -6270,7 +6270,7 @@ button.close {
 }
 */
 body {
-  max-width: 1920px;
+  max-width: 1440px;
   margin: 0 auto; }
 
 h1 {
@@ -6317,12 +6317,8 @@ p {
     p {
       font-size: 20px; } }
 
-.home-wrapper {
-  position: relative;
-  height: 100%; }
-
 .navbar-seven {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
   display: flex;
   flex-wrap: wrap;
   padding: 0 20px;
@@ -6339,27 +6335,16 @@ p {
   background-color: white; }
 
 .navbar-links {
-  margin: 10px;
+  height: 50.8px;
+  margin: 0 10px;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   display: none; }
   .navbar-links a {
     text-decoration: none;
     color: black;
     font-family: "InfoDispSemiBold Roman"; }
-
-.navbar-burger {
-  position: absolute;
-  top: 5.5px;
-  right: 10px; }
-  .navbar-burger i {
-    font-size: 19px; }
-
-.navbar-burger > button {
-  background-color: rgba(255, 255, 255, 0) !important;
-  outline-color: white !important; }
-  .navbar-burger > button:focus {
-    outline: 0 !important; }
 
 @media only screen and (min-width: 37.5em) {
   .navbar-seven {
@@ -6369,17 +6354,19 @@ p {
     padding-top: 0;
     padding-left: 20px; }
     .navbar-seven .navbar-links {
-      display: inline; }
+      display: flex;
+      justify-content: flex-end; }
       .navbar-seven .navbar-links a {
-        margin: 0 10px;
-        font-size: 19px; }
-    .navbar-seven .navbar-burger {
-      display: none; } }
+        margin: 0 20px;
+        font-size: 19px;
+        border: solid 3px rgba(255, 255, 255, 0); }
+        .navbar-seven .navbar-links a:hover {
+          border-bottom: solid 3px #e95f48; } }
 .home-banner {
   height: 100vh;
   max-height: 1080px;
   width: 100vw;
-  max-width: 1920px;
+  max-width: 1440px;
   background-image: url("/assets/img/banner_seven_invest.jpg");
   background-size: cover;
   background-position: 65% 100%;
@@ -6411,58 +6398,105 @@ p {
     .invest-vision {
       padding: 50px 200px; } }
 
-.invest-vision > h3 {
-  font-family: 'InfoDispBold Roman'; }
+.invest-vision > h2 {
+  font-family: 'InfoDispBold Roman';
+  text-align: center; }
 
 .invest-portfolio {
-  padding: 50px 15px;
+  padding: 50px 15px 0 15px;
   text-align: center;
-  position: relative; }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
   @media only screen and (min-width: 37.5em) {
     .invest-portfolio {
-      padding: 50px 100px; } }
+      padding: 50px 100px 0 100px; } }
   @media only screen and (min-width: 80em) {
     .invest-portfolio {
-      padding: 50px 200px; } }
+      padding: 50px 200px 0 200px; } }
+
+.invest-portfolio > h2 {
+  font-family: 'InfoDispBold Roman'; }
 
 .invest-portfolio-card {
-  width: 100%;
-  height: auto;
+  width: 300px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: 2px 2px 10px rgba(136, 136, 136, 0.8);
-  margin: 50px 0; }
-  @media only screen and (min-width: 80em) {
+  margin-bottom: 100px; }
+  @media only screen and (min-width: 37.5em) {
     .invest-portfolio-card {
-      flex-direction: row; } }
+      width: 400px;
+      height: 800px; } }
+  @media only screen and (min-width: 64em) {
+    .invest-portfolio-card {
+      flex-direction: row;
+      width: 1000px;
+      height: 500px; } }
 
 .invest-portfolio-card-img {
   width: 100%;
-  height: 70vh; }
-  @media only screen and (min-width: 80em) {
+  height: 300px; }
+  @media only screen and (min-width: 37.5em) {
+    .invest-portfolio-card-img {
+      width: 100%;
+      height: 400px; } }
+  @media only screen and (min-width: 64em) {
     .invest-portfolio-card-img {
       width: 50%;
-      height: 70vh; } }
+      height: 500px; } }
 
 .invest-portfolio-card-text {
   width: 100%;
-  height: auto;
-  padding: 40px 20px;
+  height: 300px;
+  padding: 20px 20px;
   position: relative;
-  text-align: left; }
-  @media only screen and (min-width: 80em) {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  @media only screen and (min-width: 37.5em) {
+    .invest-portfolio-card-text {
+      width: 100%;
+      height: 400px; } }
+  @media only screen and (min-width: 64em) {
     .invest-portfolio-card-text {
       width: 50%;
-      min-height: 70vh; } }
+      height: 500px; } }
 
 .invest-portfolio-card-text > h3 {
   margin-top: 0;
-  font-family: 'InfoDispBold Roman'; }
+  font-family: 'InfoDispBold Roman';
+  font-size: 16px; }
+  @media only screen and (min-width: 37.5em) {
+    .invest-portfolio-card-text > h3 {
+      font-size: 20px; } }
+  @media only screen and (min-width: 64em) {
+    .invest-portfolio-card-text > h3 {
+      font-size: 24px; } }
 
 .invest-portfolio-card-text > h4 {
   margin-top: 0;
-  font-family: 'InfoDispBook Italic'; }
+  font-family: 'InfoDispBook Italic';
+  font-size: 16px; }
+  @media only screen and (min-width: 37.5em) {
+    .invest-portfolio-card-text > h4 {
+      font-size: 20px; } }
+  @media only screen and (min-width: 64em) {
+    .invest-portfolio-card-text > h4 {
+      font-size: 24px; } }
+
+.invest-portfolio-card-text > p {
+  font-size: 12px; }
+  @media only screen and (min-width: 37.5em) {
+    .invest-portfolio-card-text > p {
+      font-size: 16px; } }
+  @media only screen and (min-width: 64em) {
+    .invest-portfolio-card-text > p {
+      font-size: 20px; } }
 
 .switch-img {
   background-image: url("/assets/img/switch_collective.jpg");
@@ -6475,17 +6509,20 @@ p {
   background-position: 45% 0; }
 
 .invest-portfolio-card-logo {
-  height: 75px;
+  height: 30px;
   position: absolute;
-  top: 20px;
-  right: 20px; }
+  top: 10px;
+  right: 10px; }
+  @media only screen and (min-width: 37.5em) {
+    .invest-portfolio-card-logo {
+      height: 65px; } }
   @media only screen and (min-width: 80em) {
     .invest-portfolio-card-logo {
-      height: 100px; } }
+      height: 80px; } }
 
-#vision, #portfolio {
+#vision-anchor, #portfolio-anchor {
   position: absolute;
-  top: -50px; }
+  top: 0; }
 
 .footer {
   min-height: 250px;
@@ -6521,9 +6558,8 @@ p {
   @media only screen and (min-width: 64em) {
     .footer-categories-container {
       display: flex;
-      justify-content: space-between;
-      flex-grow: 1;
-      width: 80%; } }
+      justify-content: space-around;
+      flex-grow: 1; } }
 
 .footer-categories {
   width: auto;
