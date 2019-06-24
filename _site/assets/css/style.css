@@ -6621,3 +6621,10 @@ p {
   width: auto; }
   .seven-main-link > h3:hover {
     color: black; }
+
+.contact-button {
+  background-color: rgba(58, 162, 172, 0.7);
+  font-family: 'InfoDispBold Roman';
+  border: none; }
+  .contact-button:hover {
+    background-color: #3aa2ac; }
