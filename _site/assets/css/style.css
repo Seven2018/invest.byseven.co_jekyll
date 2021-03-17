@@ -6372,12 +6372,10 @@ p {
   background-position: 65% 100%;
   text-align: left;
   position: relative;
-  overflow: auto;
   margin-top: -50.8px; }
   @media only screen and (min-width: 80em) {
     .home-banner {
-      background-position: 0 100%;
-      min-height: 750px; } }
+      background-position: 0 100%; } }
 
 .home-banner-title {
   height: 35vh;
@@ -6527,7 +6525,7 @@ p {
 .footer {
   min-height: 250px;
   padding: 25px 50px;
-  background-color: #606060;
+  background-color: #262A2D;
   display: flex;
   justify-content: space-between;
   flex-direction: column; }
@@ -6544,7 +6542,7 @@ p {
       width: 20%;
       text-align: left;
       padding-right: 20px;
-      border-right: 3px solid #333333; } }
+      border-right: 3px solid rgba(255, 255, 255, 0.7); } }
 
 .footer-main > p {
   margin: 0 auto;
@@ -6558,8 +6556,9 @@ p {
   @media only screen and (min-width: 64em) {
     .footer-categories-container {
       display: flex;
-      justify-content: space-around;
-      flex-grow: 1; } }
+      justify-content: space-between;
+      flex-grow: 1;
+      width: 80%; } }
 
 .footer-categories {
   width: auto;
@@ -6596,7 +6595,8 @@ p {
   margin: 0; }
 
 .footer-main h3, .footer-main h4, .footer-categories h3, .footer-categories h4 {
-  font-family: "InfoDispBold Roman"; }
+  font-family: "InfoDispBook Roman";
+  color: white; }
 .footer-main h3, .footer-categories h3 {
   margin: 20px 0; }
   @media only screen and (min-width: 37.5em) {
@@ -6608,19 +6608,14 @@ p {
   margin: 20px 0; }
 .footer-main p, .footer-main a, .footer-categories p, .footer-categories a {
   font-family: "InfoDispBook Roman";
-  font-size: 16px; }
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7); }
   @media only screen and (min-width: 64em) {
     .footer-main p, .footer-main a, .footer-categories p, .footer-categories a {
       width: auto;
       font-size: 20px; } }
 .footer-main a:hover, .footer-categories a:hover {
-  color: #333333; }
-
-.seven-main-link > h3 {
-  color: #333333;
-  width: auto; }
-  .seven-main-link > h3:hover {
-    color: black; }
+  color: white; }
 
 .contact-button {
   background-color: rgba(58, 162, 172, 0.7);
