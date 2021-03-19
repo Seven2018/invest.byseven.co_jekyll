@@ -193,6 +193,7 @@ p {
 .invest-vision {
   padding: 50px 15px;
   position: relative;
+  text-align: center;
 
   @include from-large {
     padding: 50px 200px;
@@ -210,20 +211,11 @@ p {
 // PORTFOLIO
 
 .invest-portfolio {
-  padding: 50px 15px 0 15px;
   text-align: center;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @include from-medium {
-    padding: 50px 100px 0 100px;
-  }
-
-  @include from-xlarge {
-    padding: 50px 200px 0 200px;
-  }
 }
 
 .invest-portfolio > h2 {
@@ -233,7 +225,7 @@ p {
 
 .invest-portfolio-card {
   width: 300px;
-  height: 600px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -242,14 +234,19 @@ p {
 
   @include from-medium {
     width: 400px;
-    height: 800px;
+    height: 400px;
   }
 
   @include from-large {
     flex-direction: row;
     width: 1000px;
-    height: 500px;
+    height: 400px;
   }
+}
+
+.card-flip {
+  display: flex;
+  padding-bottom: 150px;
 }
 
 .invest-portfolio-card-img {
@@ -262,8 +259,8 @@ p {
   }
 
   @include from-large {
-    width: 50%;
-    height: 500px;
+    width: 100%;
+    height: 400px;
   }
 }
 
@@ -283,8 +280,8 @@ p {
   }
 
   @include from-large {
-    width: 50%;
-    height: 500px;
+    width: 100%;
+    height: 400px;
   }
 }
 
@@ -308,7 +305,7 @@ p {
   font-size: 16px;
 
   @include from-medium {
-    font-size: 20px;
+    font-size: 17px;
   }
 
   @include from-large {
@@ -320,11 +317,11 @@ p {
   font-size: 12px;
 
   @include from-medium {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   @include from-large {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -355,35 +352,7 @@ p {
   }
 }
 
-.card {
-  width: 100%;
-  height: 100%;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-  cursor: pointer;
-  position: relative;
-}
 
-.card.is-flipped {
-  transform: rotateY(180deg);
-}
-
-.card__face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  line-height: 260px;
-  color: black;
-  text-align: center;
-  font-weight: bold;
-  font-size: 40px;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.card__face--front {
-  background: red;
-}
 
 
 
@@ -400,131 +369,266 @@ p {
 
 // FOOTER
 
-.footer {
-  min-height: 250px;
-  padding: 25px 50px;
-  background-color: #262A2D;
+.footer-lab-seven {
+  width: 100%;
+  min-height: 200px;
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
+  align-items: flex-start;
+  background-color: rgb(0,0,0);
+  padding: 2rem;
 
-  @include from-large {
-    flex-direction: row;
-  }
-}
-
-.footer-main {
-  text-align: center;
-  margin: 10px 0;
-
-  @include from-large {
-    display: block;
-    width: 20%;
-    text-align: left;
-    padding-right: 20px;
-    border-right: 3px solid rgba(255,255,255,0.7);
-  }
-}
-
-.footer-main > p {
-  margin: 0 auto;
-  text-align: center;
-
-  @include from-large {
-    text-align: left;
-  }
-}
-
-.footer-categories-container {
-  display: grid;
-
-  @include from-large {
-    display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
-    width: 80%;
-  }
-}
-
-.footer-categories {
-  width: auto;
-  height: auto;
-  text-align: center;
-  margin: 10px 0;
-
-  @include from-large {
-    width: 200px;
-    text-align: left;
-    padding-left: 60px;
-  }
-}
-
-#footer-categories1 {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-#footer-categories2 {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-#footer-categories3 {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-#footer-categories4 {
-  grid-column: 2;
-  grid-row: 2;
-}
-
-.footer-links {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-links > a {
-  margin: 0;
-}
-
-.footer-main, .footer-categories {
-  h3, h4 {
-    font-family: "InfoDispBook Roman";
+  p {
+    width: 100px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 1.6rem;
     color: white;
   }
-  h3 {
-    margin: 20px 0;
 
-    @include from-medium {
-      font-size: 24px;
-      margin: 17px 0;
+  a {
+    width: 100px;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    color: rgba(255,255,255,0.8);
+    margin: 0;
+
+    &:hover {
+      color: rgba(255,255,255,1);
     }
   }
-  h4 {
-    font-size: 18px;
-    margin: 20px 0;
-  }
+
   p, a {
-    font-family: "InfoDispBook Roman";
-    font-size: 16px;
-    color: rgba(255,255,255,0.7);
-
-    @include from-large {
-      width: auto;
-      font-size: 20px;
-    }
+    margin-bottom: 1rem;
   }
-  a:hover {
-    color: rgba(255,255,255,1);
+
+  @include from-medium {
+    height: 160px;
+    // padding: 3rem 10rem 3rem 6rem;
+    padding: 3rem 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 }
 
-.contact-button {
-  background-color: rgba(58, 162, 172, 0.7);
-  font-family: 'InfoDispBold Roman';
-  border: none;
-  &:hover {
-    background-color: rgba(58, 162, 172, 1);
+.footer-lab-logo {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  img {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    // width: auto;
+    margin: 0;
+  }
+
+  @include from-medium {
+    border-right: 2px solid white;
+    padding-right: 3rem;
+    margin-bottom: 0;
+
+    img {
+      margin: 1rem;
+    }
+  }
+}
+
+.footer-lab-div {
+  margin-bottom: 20px;
+
+  @include from-medium {
+    margin: 0;
+  }
+}
+
+#seven-logo-footer {
+  height: 5rem;
+}
+
+.footer-lab-media {
+  margin: 0 1rem;
+
+  p {
+    width: auto;
+  }
+
+  @include from-medium {
+    margin: 0 2rem 0 0;
+  }
+}
+
+
+.footer-lab-media-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90px;
+
+  a {
+    margin: 0;
+    // text-align: center;
+    transition: all .25s ease-in-out;
+    font-size: 14px;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    i {
+      font-size: 14px;
+    }
+
+    &:hover {
+      color: #95B9DB;
+    }
+  }
+}
+
+.footer-lab-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  a:nth-of-type(1) {
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  a:nth-of-type(2) {
+
+    &:hover {
+      color: #FBC84A;
+    }
+  }
+
+  a:nth-of-type(3) {
+
+    &:hover {
+      color: #95B9DB;
+    }
+  }
+
+  a:nth-of-type(4) {
+
+    &:hover {
+      color: #3DA1A9;
+    }
+  }
+
+  a:nth-of-type(5) {
+
+    &:hover {
+      color: #E95F48;
+    }
+  }
+}
+
+// TRAININGS
+
+.footer-trainings-seven {
+  width: 100%;
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-rows: minmax(75px, auto);;
+  background-color: rgb(0,0,0);
+  padding: 20px 50px;
+  margin-top: 50px;
+
+  p {
+    width: 100px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+  }
+
+  a {
+    width: 100px;
+    font-family: 'Montserrat';
+    font-weight: 200;
+  }
+
+  @include from-medium {
+    height: 170px;
+    padding: 30px 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+// TRAINING PAGE
+
+.footer-seven-training-page {
+
+  p {
+    color: black;
+  }
+}
+
+.flex-row-between-start {
+  display: flex;
+}
+
+
+.card {
+  margin: 0px 30px;
+  height: 100%;
+  width: 100%;
+  perspective: 100rem;
+  position: relative;
+
+  p {
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  &__side {
+    height: 400px;
+    width: 400px;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 700ms ease;
+    backface-visibility: hidden;
+
+    &--front {
+
+    }
+
+    &--back {
+      background-color: white;
+      transform: rotateY(180deg);
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  @include from-medium-high {
+    height: 400px;
+    width: 400px;
+    p {
+      font-size: 14px;
+    }
   }
 }
