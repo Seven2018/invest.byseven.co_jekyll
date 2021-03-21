@@ -6426,8 +6426,7 @@ p {
   text-align: center;
   position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center; }
+  flex-direction: column; }
 
 .invest-portfolio > h2 {
   font-family: 'Montserrat';
@@ -6452,8 +6451,12 @@ p {
       height: 400px; } }
 
 .card-flip {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   padding-bottom: 150px; }
+  @media only screen and (min-width: 50em) {
+    .card-flip {
+      grid-template-columns: 1fr 1fr; } }
 
 .invest-portfolio-card-img {
   width: 100%;
@@ -6677,16 +6680,17 @@ p {
 .flex-row-between-start {
   display: flex; }
 
-.card {
+.card-1 {
+  margin-bottom: 300px;
   margin: 0px 30px;
   height: 100%;
   width: 100%;
   perspective: 100rem;
   position: relative; }
-  .card p {
+  .card-1 p {
     font-size: 12px;
     font-weight: 300; }
-  .card__side {
+  .card-1__side {
     height: 400px;
     width: 400px;
     color: black;
@@ -6694,20 +6698,52 @@ p {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 0;
-    left: 0;
     transition: all 700ms ease;
     backface-visibility: hidden; }
-    .card__side--back {
+    .card-1__side--back {
       background-color: white;
       transform: rotateY(180deg); }
-  .card:hover .card__side--front {
+  .card-1:hover .card-1__side--front {
     transform: rotateY(-180deg); }
-  .card:hover .card__side--back {
+  .card-1:hover .card-1__side--back {
     transform: rotateY(0); }
   @media only screen and (min-width: 64em) {
-    .card {
+    .card-1 {
       height: 400px;
       width: 400px; }
-      .card p {
+      .card-1 p {
+        font-size: 14px; } }
+
+.card-2 {
+  margin-bottom: 300px;
+  margin: 0px 30px;
+  height: 100%;
+  width: 100%;
+  perspective: 100rem;
+  position: relative; }
+  .card-2 p {
+    font-size: 12px;
+    font-weight: 300; }
+  .card-2__side {
+    height: 400px;
+    width: 400px;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    transition: all 700ms ease;
+    backface-visibility: hidden; }
+    .card-2__side--back {
+      background-color: white;
+      transform: rotateY(180deg); }
+  .card-2:hover .card-2__side--front {
+    transform: rotateY(-180deg); }
+  .card-2:hover .card-2__side--back {
+    transform: rotateY(0); }
+  @media only screen and (min-width: 64em) {
+    .card-2 {
+      height: 400px;
+      width: 400px; }
+      .card-2 p {
         font-size: 14px; } }

@@ -215,7 +215,6 @@ p {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .invest-portfolio > h2 {
@@ -245,8 +244,12 @@ p {
 }
 
 .card-flip {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   padding-bottom: 150px;
+  @include from-medium-low {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .invest-portfolio-card-img {
@@ -581,7 +584,8 @@ p {
 }
 
 
-.card {
+.card-1 {
+  margin-bottom: 300px;
   margin: 0px 30px;
   height: 100%;
   width: 100%;
@@ -601,8 +605,57 @@ p {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 0;
-    left: 0;
+    transition: all 700ms ease;
+    backface-visibility: hidden;
+
+    &--front {
+
+    }
+
+    &--back {
+      background-color: white;
+      transform: rotateY(180deg);
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  @include from-medium-high {
+    height: 400px;
+    width: 400px;
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+.card-2 {
+  margin-bottom: 300px;
+  margin: 0px 30px;
+  height: 100%;
+  width: 100%;
+  perspective: 100rem;
+  position: relative;
+
+  p {
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  &__side {
+    height: 400px;
+    width: 400px;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
     transition: all 700ms ease;
     backface-visibility: hidden;
 
