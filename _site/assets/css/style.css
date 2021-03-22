@@ -6432,31 +6432,16 @@ p {
   font-family: 'Montserrat';
   font-weight: 600; }
 
-.invest-portfolio-card {
-  width: 300px;
-  height: 400px;
+.invest-porfolio-cards {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 2px 2px 10px rgba(136, 136, 136, 0.8);
+  flex-wrap: wrap;
   margin-bottom: 100px; }
   @media only screen and (min-width: 37.5em) {
-    .invest-portfolio-card {
-      width: 400px;
-      height: 400px; } }
-  @media only screen and (min-width: 64em) {
-    .invest-portfolio-card {
+    .invest-porfolio-cards {
       flex-direction: row;
-      width: 1000px;
-      height: 400px; } }
-
-.card-flip {
-  display: grid;
-  grid-template-columns: 1fr;
-  padding-bottom: 150px; }
-  @media only screen and (min-width: 50em) {
-    .card-flip {
-      grid-template-columns: 1fr 1fr; } }
+      justify-content: space-evenly; } }
 
 .invest-portfolio-card-img {
   width: 100%;
@@ -6526,8 +6511,7 @@ p {
 
 .plume-img {
   background-image: url("/assets/img/plume.png");
-  background-size: cover;
-  background-position: 45% 0; }
+  background-size: cover; }
 
 .invest-portfolio-card-logo {
   height: 30px;
@@ -6540,6 +6524,56 @@ p {
   @media only screen and (min-width: 80em) {
     .invest-portfolio-card-logo {
       height: 80px; } }
+
+.card-container {
+  margin-bottom: 30px;
+  width: 350px;
+  height: 400px;
+  perspective: 1000px; }
+  .card-container div {
+    width: 100%;
+    height: 100%; }
+  @media only screen and (min-width: 37.5em) {
+    .card-container {
+      width: 500px;
+      height: 500px; } }
+
+.contact-btn {
+  background-color: #E95F48;
+  border: 1px solid #E95F48;
+  border-radius: 5px;
+  padding: 5px; }
+  .contact-btn a {
+    color: white; }
+  .contact-btn a:hover {
+    color: black; }
+
+.card {
+  transition: transform 2s;
+  transform-style: preserve-3d;
+  cursor: pointer; }
+
+.front, .back {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden; }
+
+.front:hover {
+  bottom: 2px;
+  left: 2px;
+  box-shadow: 0px 0px 20px 1px #000; }
+
+.back {
+  border: 2px solid black;
+  transform: rotateY(180deg); }
+
+.back:hover {
+  bottom: 2px;
+  right: 2px;
+  box-shadow: 0px 0px 20px 1px #000; }
 
 #vision-anchor, #portfolio-anchor {
   position: absolute;
@@ -6679,71 +6713,3 @@ p {
 
 .flex-row-between-start {
   display: flex; }
-
-.card-1 {
-  margin-bottom: 300px;
-  margin: 0px 30px;
-  height: 100%;
-  width: 100%;
-  perspective: 100rem;
-  position: relative; }
-  .card-1 p {
-    font-size: 12px;
-    font-weight: 300; }
-  .card-1__side {
-    height: 400px;
-    width: 400px;
-    color: black;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    transition: all 700ms ease;
-    backface-visibility: hidden; }
-    .card-1__side--back {
-      background-color: white;
-      transform: rotateY(180deg); }
-  .card-1:hover .card-1__side--front {
-    transform: rotateY(-180deg); }
-  .card-1:hover .card-1__side--back {
-    transform: rotateY(0); }
-  @media only screen and (min-width: 64em) {
-    .card-1 {
-      height: 400px;
-      width: 400px; }
-      .card-1 p {
-        font-size: 14px; } }
-
-.card-2 {
-  margin-bottom: 300px;
-  margin: 0px 30px;
-  height: 100%;
-  width: 100%;
-  perspective: 100rem;
-  position: relative; }
-  .card-2 p {
-    font-size: 12px;
-    font-weight: 300; }
-  .card-2__side {
-    height: 400px;
-    width: 400px;
-    color: black;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    transition: all 700ms ease;
-    backface-visibility: hidden; }
-    .card-2__side--back {
-      background-color: white;
-      transform: rotateY(180deg); }
-  .card-2:hover .card-2__side--front {
-    transform: rotateY(-180deg); }
-  .card-2:hover .card-2__side--back {
-    transform: rotateY(0); }
-  @media only screen and (min-width: 64em) {
-    .card-2 {
-      height: 400px;
-      width: 400px; }
-      .card-2 p {
-        font-size: 14px; } }
