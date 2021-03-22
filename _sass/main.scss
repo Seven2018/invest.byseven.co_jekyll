@@ -69,6 +69,7 @@ p {
 .navbar-seven {
   background-color: rgba(255,255,255,0);
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   padding: 0 20px;
   position: sticky;
@@ -94,12 +95,28 @@ p {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  display: none;
 
   a {
     text-decoration: none;
     color: black;
     font-family: "Montserrat";
+  }
+
+  .nav-link-word {
+    display:none;
+  }
+}
+
+.contact-btn {
+  background-color: #E95F48;
+  border: 1px solid #E95F48;
+  border-radius: 5px;
+  padding: 5px;
+  a{
+  color: white;
+  }
+  a:hover {
+    color:black;
   }
 }
 
@@ -123,7 +140,11 @@ p {
                 border-bottom: solid 3px rgb(233, 95, 72);
               }
             }
+              .nav-link-word {
+                display:block;
+              }
         }
+
     }
 }
 
@@ -354,19 +375,7 @@ p {
     }
 }
 
-.contact-btn {
-  background-color: #E95F48;
-  border: 1px solid #E95F48;
-  border-radius: 5px;
-  padding: 5px;
-  a{
-  color: white;
-  }
-  a:hover {
-    color:black;
-  }
 
-}
 
 .card {
   transition: transform 2s;
