@@ -6520,7 +6520,7 @@ p {
 
 .Numa {
   top: 300px;
-  left: 20%;
+  left: 52%;
   position: absolute;
   color: white; }
   .Numa a {
@@ -6529,7 +6529,7 @@ p {
     color: white; }
   @media only screen and (min-width: 37.5em) {
     .Numa {
-      left: 30%;
+      left: 65%;
       top: 450px; } }
 
 .switch-img {
