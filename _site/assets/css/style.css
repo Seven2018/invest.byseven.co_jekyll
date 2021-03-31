@@ -6276,24 +6276,24 @@ body {
 
 h1 {
   font-family: "Montserrat";
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700; }
   @media only screen and (min-width: 37.5em) {
     h1 {
-      font-size: 28px; } }
+      font-size: 24px; } }
   @media only screen and (min-width: 64em) {
     h1 {
-      font-size: 40px; } }
+      font-size: 32px; } }
 
 h2 {
   font-family: "Montserrat";
-  font-size: 20px; }
+  font-size: 18px; }
   @media only screen and (min-width: 37.5em) {
     h2 {
-      font-size: 24px; } }
+      font-size: 20px; } }
   @media only screen and (min-width: 64em) {
     h2 {
-      font-size: 30px; } }
+      font-size: 2rem; } }
 
 h3 {
   font-family: "Montserrat";
@@ -6317,14 +6317,14 @@ p {
   font-size: 16px; }
   @media only screen and (min-width: 64em) {
     p {
-      font-size: 20px; } }
+      font-size: 1.6rem; } }
 
 .navbar-seven {
   background-color: rgba(255, 255, 255, 0);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 0 20px;
+  padding: 0 8px;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
@@ -6342,10 +6342,12 @@ p {
   margin: 0 10px;
   display: flex;
   justify-content: flex-end;
-  align-items: center; }
+  align-items: center;
+  font-size: 14px; }
   .navbar-links a {
     text-decoration: none;
     color: black;
+    font-size: 14px;
     font-family: "Montserrat"; }
   .navbar-links .nav-link-word {
     display: none; }
@@ -6353,8 +6355,11 @@ p {
 .contact-btn {
   background-color: #E95F48;
   border: 1px solid #E95F48;
-  border-radius: 5px;
-  padding: 5px; }
+  padding: 3px 7px;
+  display: flex;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  align-items: center; }
   .contact-btn a {
     color: white; }
   .contact-btn a:hover {
@@ -6362,22 +6367,23 @@ p {
 
 @media only screen and (min-width: 37.5em) {
   .navbar-seven {
+    height: 90px;
+    padding: 0px 70px;
     flex-wrap: nowrap;
     justify-content: space-between;
-    align-items: center;
-    padding-top: 0;
-    padding-left: 20px; }
+    align-items: center; }
     .navbar-seven .navbar-links {
       display: flex;
       justify-content: flex-end; }
       .navbar-seven .navbar-links a {
-        margin: 0 20px;
-        font-size: 19px;
+        font-size: 14px;
+        font-weight: 700;
         border: solid 3px rgba(255, 255, 255, 0); }
         .navbar-seven .navbar-links a:hover {
           border-bottom: solid 3px #e95f48; }
       .navbar-seven .navbar-links .nav-link-word {
-        display: block; } }
+        display: block;
+        margin-right: 20px; } }
 .home-banner {
   height: 100vh;
   max-height: 1080px;
@@ -6386,7 +6392,7 @@ p {
   background-color: black;
   text-align: left;
   position: relative;
-  margin-top: -50.8px;
+  margin-top: -90.8px;
   position: relative; }
   .home-banner img {
     height: 100%;
@@ -6397,20 +6403,10 @@ p {
     .home-banner {
       background-position: 0 100%; } }
 
-.gradient {
-  max-height: 1080px;
-  max-width: 1440px;
-  background-color: rgba(0, 0, 0, 0.3);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  right: 0;
-  left: 0; }
-
 .home-banner-title {
   z-index: 10;
   height: 35vh;
-  padding: 50px;
+  padding: 70px;
   position: absolute;
   top: 15%;
   color: white; }
@@ -6448,10 +6444,12 @@ p {
 
 .invest-porfolio-cards {
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+  margin-top: 50px; }
   @media only screen and (min-width: 37.5em) {
     .invest-porfolio-cards {
       flex-direction: row;
@@ -6476,8 +6474,7 @@ p {
   position: relative;
   text-align: left;
   display: flex;
-  flex-direction: column;
-  justify-content: center; }
+  flex-direction: column; }
   @media only screen and (min-width: 37.5em) {
     .invest-portfolio-card-text {
       width: 100%;
@@ -6489,7 +6486,8 @@ p {
 
 .invest-portfolio-card-text > h3 {
   margin-top: 0;
-  font-family: 'InfoDispBold Roman';
+  font-family: 'Montserrat';
+  font-weight: 700;
   font-size: 16px; }
   @media only screen and (min-width: 37.5em) {
     .invest-portfolio-card-text > h3 {
@@ -6500,14 +6498,15 @@ p {
 
 .invest-portfolio-card-text > h4 {
   margin-top: 0;
-  font-family: 'InfoDispBook Italic';
+  font-family: 'Montserrat';
   font-size: 16px; }
   @media only screen and (min-width: 37.5em) {
     .invest-portfolio-card-text > h4 {
       font-size: 17px; } }
   @media only screen and (min-width: 64em) {
     .invest-portfolio-card-text > h4 {
-      font-size: 24px; } }
+      font-size: 2rem;
+      margin-top: 25px; } }
 
 .invest-portfolio-card-text > p {
   font-size: 12px; }
@@ -6516,7 +6515,22 @@ p {
       font-size: 14px; } }
   @media only screen and (min-width: 64em) {
     .invest-portfolio-card-text > p {
-      font-size: 18px; } }
+      margin-top: 30px;
+      font-size: 1.6rem; } }
+
+.Numa {
+  top: 300px;
+  left: 52%;
+  position: absolute;
+  color: white; }
+  .Numa a {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    color: white; }
+  @media only screen and (min-width: 37.5em) {
+    .Numa {
+      left: 65%;
+      top: 450px; } }
 
 .switch-img {
   background-image: url("/assets/img/switch_collective.jpg");
@@ -6524,8 +6538,9 @@ p {
   background-position: 45% 0; }
 
 .plume-img {
-  background-image: url("/assets/img/plume.png");
-  background-size: cover; }
+  background-image: url("/assets/img/plume-copy.png");
+  background-size: cover;
+  background-position: 45% 0; }
 
 .invest-portfolio-card-logo {
   height: 30px;
@@ -6542,7 +6557,7 @@ p {
 .card-container {
   margin-bottom: 30px;
   width: 350px;
-  height: 400px;
+  height: 350px;
   perspective: 1000px; }
   .card-container div {
     width: 100%;
@@ -6566,18 +6581,15 @@ p {
   backface-visibility: hidden; }
 
 .front:hover {
-  bottom: 2px;
-  left: 2px;
-  box-shadow: 0px 0px 20px 1px #000; }
+  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2);
+  transition: 0.5s; }
 
 .back {
-  border: 2px solid black;
   transform: rotateY(180deg); }
 
 .back:hover {
-  bottom: 2px;
-  right: 2px;
-  box-shadow: 0px 0px 20px 1px #000; }
+  transition: 0.5s;
+  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2); }
 
 #vision-anchor, #portfolio-anchor {
   position: absolute;
@@ -6672,21 +6684,6 @@ p {
     .footer-lab-media-icons a:hover {
       color: #95B9DB; }
 
-.footer-lab-links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; }
-  .footer-lab-links a:nth-of-type(1):hover {
-    color: white; }
-  .footer-lab-links a:nth-of-type(2):hover {
-    color: #FBC84A; }
-  .footer-lab-links a:nth-of-type(3):hover {
-    color: #95B9DB; }
-  .footer-lab-links a:nth-of-type(4):hover {
-    color: #3DA1A9; }
-  .footer-lab-links a:nth-of-type(5):hover {
-    color: #E95F48; }
-
 .footer-trainings-seven {
   width: 100%;
   display: grid;
@@ -6711,6 +6708,11 @@ p {
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start; } }
+
+.footer-lab-links {
+  justify-content: center;
+  display: flex;
+  flex-direction: column; }
 
 .footer-seven-training-page p {
   color: black; }
