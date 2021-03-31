@@ -6280,7 +6280,7 @@ h1 {
   font-weight: 700; }
   @media only screen and (min-width: 37.5em) {
     h1 {
-      font-size: 24px; } }
+      font-size: 26px; } }
   @media only screen and (min-width: 64em) {
     h1 {
       font-size: 32px; } }
@@ -6293,7 +6293,7 @@ h2 {
       font-size: 20px; } }
   @media only screen and (min-width: 64em) {
     h2 {
-      font-size: 2rem; } }
+      font-size: 24px; } }
 
 h3 {
   font-family: "Montserrat";
@@ -6408,7 +6408,7 @@ p {
   height: 35vh;
   padding: 70px;
   position: absolute;
-  top: 15%;
+  top: 10%;
   color: white; }
   .home-banner-title h1 {
     z-index: 3; }
@@ -6519,6 +6519,8 @@ p {
       font-size: 1.6rem; } }
 
 .Numa {
+  max-width: 170px;
+  max-height: 100px;
   top: 300px;
   left: 52%;
   position: absolute;
