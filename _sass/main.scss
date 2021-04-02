@@ -442,12 +442,10 @@ p {
 // -----------------------------------------------------------------
 
 // FOOTER
-
 .footer-lab-seven {
   width: 100%;
-  min-height: 200px;
+  max-height: 180px;
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
   background-color: rgb(0,0,0);
   padding: 2rem;
@@ -461,30 +459,35 @@ p {
   }
 
   a {
+    margin-left: 15px !important;
+    margin-top: 2px;
+    margin-bottom: 1px;
     width: 100px;
     font-family: 'Montserrat';
     font-weight: 300;
-    font-size: 1.4rem;
-    line-height: 1.4rem;
+    font-size: 1.5rem;
     color: rgba(255,255,255,0.8);
-    margin: 0;
-
     &:hover {
       color: rgba(255,255,255,1);
     }
   }
 
-  p, a {
+  p {
     margin-bottom: 1rem;
   }
 
+  .footer-elements {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
   @include from-medium {
-    height: 160px;
     // padding: 3rem 10rem 3rem 6rem;
-    padding: 3rem 6rem;
+    padding: 2rem 4rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+
     align-items: flex-start;
   }
 }
@@ -495,26 +498,23 @@ p {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-
+  border-right: 2px solid white;
+  padding-right: 2rem;
   img {
     margin-bottom: 1rem;
   }
 
   p {
     font-family: 'Montserrat';
-    font-size: 14px;
+    font-size: 13.5px;
     // width: auto;
     margin: 0;
   }
 
   @include from-medium {
     border-right: 2px solid white;
-    padding-right: 3rem;
+    padding-right: 4rem;
     margin-bottom: 0;
-
-    img {
-      margin: 1rem;
-    }
   }
 }
 
@@ -527,18 +527,23 @@ p {
 }
 
 #seven-logo-footer {
-  height: 5rem;
+  height: 6rem;
 }
 
 .footer-lab-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   margin: 0 1rem;
 
   p {
+    font-size: 1.8rem;
     width: auto;
   }
 
   @include from-medium {
-    margin: 0 2rem 0 0;
+    margin-bottom: 10px;
   }
 }
 
@@ -548,7 +553,7 @@ p {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 90px;
+  width: 120px;
 
   a {
     margin: 0;
@@ -557,9 +562,7 @@ p {
     font-size: 14px;
     font-family: 'Montserrat';
     font-weight: 300;
-    i {
-      font-size: 14px;
-    }
+    color: white;
 
     &:hover {
       color: #95B9DB;
@@ -567,7 +570,46 @@ p {
   }
 }
 
+.footer-lab-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
+  a:nth-of-type(1) {
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  a:nth-of-type(2) {
+
+    &:hover {
+      color: #FBC84A;
+    }
+  }
+
+  a:nth-of-type(3) {
+
+    &:hover {
+      color: #95B9DB;
+    }
+  }
+
+  a:nth-of-type(4) {
+
+    &:hover {
+      color: #3DA1A9;
+    }
+  }
+
+  a:nth-of-type(5) {
+
+    &:hover {
+      color: #E95F48;
+    }
+  }
+}
 
 // TRAININGS
 
@@ -602,12 +644,6 @@ p {
   }
 }
 
-
-.footer-lab-links {
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-}
 // TRAINING PAGE
 
 .footer-seven-training-page {
@@ -620,5 +656,7 @@ p {
 .flex-row-between-start {
   display: flex;
 }
+
+
 
 
