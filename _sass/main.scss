@@ -11,7 +11,7 @@ h1 {
     font-weight: 700;
 
     @include from-medium {
-      font-size: 24px
+      font-size: 26px
     }
 
     @include from-large {
@@ -28,7 +28,7 @@ h2 {
     }
 
     @include from-large {
-      font-size: 2rem;
+      font-size: 24px;
     }
 }
 
@@ -187,7 +187,7 @@ p {
   height: 35vh;
   padding: 70px;
   position: absolute;
-  top: 15%;
+  top: 10%;
   color: white;
 
   h1 {
@@ -334,6 +334,8 @@ p {
 }
 
 .Numa {
+  max-width: 170px;
+  max-height: 100px;
   top: 300px;
   left: 52%;
   position: absolute;
