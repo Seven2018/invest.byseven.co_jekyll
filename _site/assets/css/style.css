@@ -6612,7 +6612,6 @@ p {
     color: white; }
   .footer-lab-seven a {
     margin-left: 15px !important;
-    margin-top: 2px;
     margin-bottom: 1px;
     width: 100px;
     font-family: 'Montserrat';
@@ -6661,7 +6660,7 @@ p {
       margin: 0; } }
 
 #seven-logo-footer {
-  height: 6rem; }
+  height: 3rem; }
 
 .footer-lab-media {
   display: flex;
@@ -6686,10 +6685,11 @@ p {
     transition: all .25s ease-in-out;
     font-size: 14px;
     font-family: 'Montserrat';
-    font-weight: 300;
-    color: white; }
+    font-weight: 300; }
     .footer-lab-media-icons a:hover {
       color: #95B9DB; }
+    .footer-lab-media-icons a .fab {
+      color: white !important; }
 
 .footer-lab-links {
   display: flex;
