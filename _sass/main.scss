@@ -463,12 +463,12 @@ p {
   }
 
   a {
-    margin-left: 15px !important;
+    margin-left: 5px !important;
     margin-bottom: 1px;
     width: 100px;
     font-family: 'Montserrat';
     font-weight: 300;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: rgba(255,255,255,0.8);
     &:hover {
       color: rgba(255,255,255,1);
@@ -490,13 +490,17 @@ p {
     padding: 2rem 4rem;
     display: flex;
     flex-direction: row;
-
     align-items: flex-start;
+    a {
+      margin-left: 15px !important;
+      font-size: 1.5rem;
+      width: 100px;
+    }
   }
 }
 
 .footer-lab-logo {
-  margin-bottom: 3rem;
+  margin-bottom: 0rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -504,20 +508,27 @@ p {
   border-right: 2px solid white;
   padding-right: 2rem;
   img {
-    margin-bottom: 1rem;
+    margin-bottom: 2.2rem;
   }
 
   p {
     font-family: 'Montserrat';
-    font-size: 13.5px;
+    font-size: 10.5px;
     // width: auto;
     margin: 0;
   }
 
   @include from-medium {
+    margin-bottom: 3rem;
     border-right: 2px solid white;
     padding-right: 4rem;
     margin-bottom: 0;
+    p {
+      font-size: 13.5px;
+    }
+    img {
+      margin-bottom: 1rem;
+    }
   }
 }
 
@@ -537,28 +548,32 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  margin: 0 1rem;
-
+  align-items: center;
   p {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     width: auto;
   }
 
   @include from-medium {
+    margin: 0 1rem;
     margin-bottom: 10px;
+    justify-content: center;
+    p {
+      font-size: 1.8rem;
+    }
   }
 }
 
 
 .footer-lab-media-icons {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 120px;
 
   a {
+    text-align: center;
     margin: 0;
     // text-align: center;
     transition: all .25s ease-in-out;
@@ -571,6 +586,13 @@ p {
     .fab {
       color:white !important;
     }
+  }
+  @include from-medium {
+  width: 100px !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   }
 }
 
@@ -660,7 +682,3 @@ p {
 .flex-row-between-start {
   display: flex;
 }
-
-
-
-

@@ -6614,12 +6614,12 @@ p {
     font-size: 1.6rem;
     color: white; }
   .footer-lab-seven a {
-    margin-left: 15px !important;
+    margin-left: 5px !important;
     margin-bottom: 1px;
     width: 100px;
     font-family: 'Montserrat';
     font-weight: 300;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: rgba(255, 255, 255, 0.8); }
     .footer-lab-seven a:hover {
       color: white; }
@@ -6634,10 +6634,14 @@ p {
       padding: 2rem 4rem;
       display: flex;
       flex-direction: row;
-      align-items: flex-start; } }
+      align-items: flex-start; }
+      .footer-lab-seven a {
+        margin-left: 15px !important;
+        font-size: 1.5rem;
+        width: 100px; } }
 
 .footer-lab-logo {
-  margin-bottom: 3rem;
+  margin-bottom: 0rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -6645,16 +6649,21 @@ p {
   border-right: 2px solid white;
   padding-right: 2rem; }
   .footer-lab-logo img {
-    margin-bottom: 1rem; }
+    margin-bottom: 2.2rem; }
   .footer-lab-logo p {
     font-family: 'Montserrat';
-    font-size: 13.5px;
+    font-size: 10.5px;
     margin: 0; }
   @media only screen and (min-width: 37.5em) {
     .footer-lab-logo {
+      margin-bottom: 3rem;
       border-right: 2px solid white;
       padding-right: 4rem;
-      margin-bottom: 0; } }
+      margin-bottom: 0; }
+      .footer-lab-logo p {
+        font-size: 13.5px; }
+      .footer-lab-logo img {
+        margin-bottom: 1rem; } }
 
 .footer-lab-div {
   margin-bottom: 20px; }
@@ -6669,21 +6678,26 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 1rem; }
+  align-items: center; }
   .footer-lab-media p {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     width: auto; }
   @media only screen and (min-width: 37.5em) {
     .footer-lab-media {
-      margin-bottom: 10px; } }
+      margin: 0 1rem;
+      margin-bottom: 10px;
+      justify-content: center; }
+      .footer-lab-media p {
+        font-size: 1.8rem; } }
 
 .footer-lab-media-icons {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 120px; }
   .footer-lab-media-icons a {
+    text-align: center;
     margin: 0;
     transition: all .25s ease-in-out;
     font-size: 14px;
@@ -6693,6 +6707,13 @@ p {
       color: #95B9DB; }
     .footer-lab-media-icons a .fab {
       color: white !important; }
+  @media only screen and (min-width: 37.5em) {
+    .footer-lab-media-icons {
+      width: 100px !important;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; } }
 
 .footer-lab-links {
   display: flex;
