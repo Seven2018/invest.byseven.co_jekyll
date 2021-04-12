@@ -6589,7 +6589,8 @@ p {
   transition: 0.5s; }
 
 .back {
-  transform: rotateY(180deg); }
+  transform: rotateY(180deg);
+  background: white; }
 
 .back:hover {
   transition: 0.5s;
