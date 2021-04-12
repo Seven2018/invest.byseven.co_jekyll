@@ -6572,7 +6572,8 @@ p {
 .card {
   transition: transform 2s;
   transform-style: preserve-3d;
-  cursor: pointer; }
+  cursor: pointer;
+  overflow: visible; }
 
 .front, .back {
   position: absolute;
@@ -6580,7 +6581,8 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  backface-visibility: hidden; }
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; }
 
 .front:hover {
   box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2);

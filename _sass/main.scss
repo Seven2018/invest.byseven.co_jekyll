@@ -400,6 +400,7 @@ p {
   transition: transform 2s;
   transform-style: preserve-3d;
   cursor: pointer;
+  overflow: visible;
 }
 
 .front, .back {
@@ -409,6 +410,7 @@ p {
   justify-content: center;
   align-items: center;
   backface-visibility: hidden;
+   -webkit-backface-visibility: hidden;
 }
 
 
